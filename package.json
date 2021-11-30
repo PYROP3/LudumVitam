@@ -15,12 +15,11 @@
   "main": "server.js",
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production webpack",
     "lint": "eslint .",
     "postinstall": "npm run build",
-    "start": "webpack-dev-server",
+    "start": "node server.js",
     "test": "echo 'no tests'",
     "validate": "npm ls >/dev/null",
-    "webpack": "webpack-dev-server"
+    "webpack": "node server.js"
   }
 }
