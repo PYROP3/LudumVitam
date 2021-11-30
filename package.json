@@ -2,22 +2,26 @@
   "name": "ludum-vitam",
   "description": "",
   "version": "1.0.0",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {},
-  "engines": {
-    "node": "^4.0.0",
-    "npm": "^3.0.0"
-  },
-  "license": "ISC",
-  "main": "server.js",
-  "private": true,
   "scripts": {
     "lint": "eslint .",
     "start": "node server.js",
     "test": "echo 'no tests'",
     "validate": "npm ls >/dev/null"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PYROP3/LudumVitam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PYROP3/LudumVitam/issues"
+  },
+  "homepage": "https://github.com/PYROP3/LudumVitam#readme"
 }
