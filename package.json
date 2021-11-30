@@ -1,0 +1,26 @@
+{
+  "name": "ludum-vitam",
+  "description": "",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "^4.0.0",
+    "npm": "^3.0.0"
+  },
+  "license": "ISC",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "lint": "eslint .",
+    "postinstall": "npm run build",
+    "start": "webpack-dev-server",
+    "test": "echo 'no tests'",
+    "validate": "npm ls >/dev/null",
+    "webpack": "webpack-dev-server"
+  }
+}
