@@ -12,7 +12,7 @@
      }
 
      body{
-         background-color: rgba(16,16,16, .6);
+         background-color: rgb(34, 34, 34);
      }
 
      header{
@@ -27,33 +27,21 @@
      }
 
      .logo{
-        width: 100px;
-        height: 100%;
+        width: 200px;
         padding: 10px;
-
-     }
-
-     .galeria{
-         color: white;
-         font-size: 50px;
-         text-align: center;
-         font-family: fantasy;
-         margin-top: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
      }
 
      nav{
-        background-color: rgba(16,16,16, .6);
-        width: 545px;
+        background-color: rgba(47,46,49);
+        width: 70%;
         height: 100%;
         margin-right: auto;
         margin-left: auto;
-        margin-top: 10px;
+        margin-top: 100px;
         margin-bottom: 50px;
-     }
-
-     .min{
-         width: 250px;
-         padding: 10px;
      }
 
      .lbox{
@@ -83,7 +71,6 @@
          width: 800px;
          margin-left: auto;
          margin-right: auto;
-         
      }
 
      .btn{
@@ -107,11 +94,6 @@
          top: 45%;
      }
 
-     #close{
-         right: 20%;
-         top: 8%;
-     }
-
      .box_img img{
          opacity: 0;
      }
@@ -121,117 +103,153 @@
          transition: opacity .4s linear;
      }
 
+     .tg  {border-collapse:collapse;border-spacing:0;margin:auto;width:100%;}
+    .tg td{border-style:hidden;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-style:hidden;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-0lax{text-align:center;vertical-align:middle}
+
+    /* Style the Image Used to Trigger the Modal */
+    .min {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .min:hover {opacity: 0.7;}
+
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    }
+
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    }
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+    from {transform:scale(0.6)}
+    to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
 </style>
+
+<script>
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    function setmodal(imgsrc) {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img-modal-content");
+        modal.style.display = "block";
+        modalImg.src = imgsrc;
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    function clearmodal() {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
 
 </head>
 <body>
 
-    <header>
-        <a> <img src="logo.png" class="logo"> </a> 
-   </header>
+    <nav>
 
-   <div class="galeria">
-       <a> GALERIA </a>
-   </div>
+    <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0lax" colspan="2">
+                <a> <img src="logo.png" class="logo"> </a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax"><img src="img1.gif" class="min" onclick="setmodal(this.src)"></td>
+            <td class="tg-0lax"><img src="img2.gif" class="min" onclick="setmodal(this.src)"></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><img src="img3.gif" class="min" onclick="setmodal(this.src)"></td>
+            <td class="tg-0lax"><img src="img4.gif" class="min" onclick="setmodal(this.src)"></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><img src="img5.gif" class="min" onclick="setmodal(this.src)"></td>
+            <td class="tg-0lax"><img src="img6.gif" class="min" onclick="setmodal(this.src)"></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><img src="img7.gif" class="min" onclick="setmodal(this.src)"></td>
+            <td class="tg-0lax"><img src="img8.gif" class="min" onclick="setmodal(this.src)"></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><img src="img9.gif" class="min" onclick="setmodal(this.src)"></td>
+            <td class="tg-0lax"><img src="img10.gif" class="min" onclick="setmodal(this.src)"></td>
+          </tr>
+        </tbody>
+    </table>
 
-<nav>
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-     <a href="#img1"> <img src="img1.gif" class="min"> </a> <a href="#img2"> <img src="img2.gif" class="min"> </a> 
-     <a href="#img3"> <img src="img3.gif" class="min"> </a> <a href="#img4"> <img src="img4.gif" class="min"> </a>
-     <a href="#img5"> <img src="img5.gif" class="min"> </a> <a href="#img6"> <img src="img6.gif" class="min"> </a>
-     <a href="#img7"> <img src="img7.gif" class="min"> </a> <a href="#img8"> <img src="img8.gif" class="min"> </a>
-     <a href="#img9"> <img src="img9.gif" class="min"> </a> <a href="#img10"> <img src="img10.gif" class="min"> </a>
-
-<div class="lbox" id="img1">
-    <div class="box_img">
-        <a href="#img10" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img1.gif">
-        <a href="#img2" class="btn" id="next"> &#187; </a>
+        <!-- The Close Button -->
+        <span class="close" onclick="clearmodal()">&times;</span>
+    
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img-modal-content">
     </div>
-</div>
-
-<div class="lbox" id="img2">
-    <div class="box_img">
-        <a href="#img1" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img2.gif">
-        <a href="#img3" class="btn" id="next"> &#187; </a>
-    </div>
-</div>
-
-<div class="lbox" id="img3">
-    <div class="box_img">
-        <a href="#img2" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img3.gif">
-        <a href="#img4" class="btn" id="next"> &#187; </a>
-    </div>
-</div>
-
-<div class="lbox" id="img4">
-    <div class="box_img">
-        <a href="#img3" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img4.gif">
-        <a href="#img5" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-
-<div class="lbox" id="img5">
-    <div class="box_img">
-        <a href="#img4" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img5.gif">
-        <a href="#img6" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-<div class="lbox" id="img6">
-    <div class="box_img">
-        <a href="#img5" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img6.gif">
-        <a href="#img7" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-<div class="lbox" id="img7">
-    <div class="box_img">
-        <a href="#img6" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img7.gif">
-        <a href="#img8" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-<div class="lbox" id="img8">
-    <div class="box_img">
-        <a href="#img7" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img  class="imggrande" src="img8.gif">
-        <a href="#img9" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-<div class="lbox" id="img9">
-    <div class="box_img">
-        <a href="#img8" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img9.gif">
-        <a href="#img10" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
-
-<div class="lbox" id="img10">
-    <div class="box_img">
-        <a href="#img9" class="btn" id="prev"> &#171; </a>
-        <a href="" class="btn" id="close"> X </a>
-        <img class="imggrande" src="img10.gif">
-        <a href="#img1" class="btn" id="next"> &#187; </a>
-    </div> 
-</div>
 
 </nav>
 
