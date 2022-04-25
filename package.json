@@ -1,27 +1,21 @@
 {
-  "name": "ludum-vitam",
-  "description": "",
+  "name": "getting-started",
   "version": "1.0.0",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "winston": "^3.3.3"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "lint": "eslint .",
-    "start": "node server.js",
-    "test": "echo 'no tests'",
-    "validate": "npm ls >/dev/null"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PYROP3/LudumVitam.git"
+  "author": "Shay DeWael",
+  "license": "MIT",
+  "dependencies": {
+    "discord-interactions": "^3.2.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.3"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PYROP3/LudumVitam/issues"
-  },
-  "homepage": "https://github.com/PYROP3/LudumVitam#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
